@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyShop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      overflow:hidden;
+      background:
+      linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.9)),
+      url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:white;
+    }
+
+    .container{
+      width:90%;
+      max-width:700px;
+      text-align:center;
+      padding:50px 35px;
+      border-radius:30px;
+      backdrop-filter:blur(12px);
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.15);
+      box-shadow:0 10px 40px rgba(0,0,0,0.4);
+      animation:fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .logo{
+      width:90px;
+      height:90px;
+      margin:auto;
+      margin-bottom:25px;
+      border-radius:50%;
+      background:#2563eb;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:38px;
+      font-weight:bold;
+      box-shadow:0 5px 20px rgba(37,99,235,0.5);
+    }
+
+    h1{
+      font-size:52px;
+      margin-bottom:15px;
+      font-weight:700;
+    }
+
+    p{
+      font-size:18px;
+      line-height:1.7;
+      color:#dbeafe;
+      margin-bottom:40px;
+    }
+
+    .buttons{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .btn{
+      padding:15px 32px;
+      border-radius:14px;
+      text-decoration:none;
+      font-size:17px;
+      font-weight:600;
+      transition:0.3s;
+      color:white;
+      min-width:200px;
+    }
+
+    .shop{
+      background:linear-gradient(45deg,#2563eb,#3b82f6);
+      box-shadow:0 5px 20px rgba(37,99,235,0.4);
+    }
+
+    .shop:hover{
+      transform:translateY(-5px) scale(1.03);
+      box-shadow:0 8px 25px rgba(37,99,235,0.6);
+    }
+
+    .wa{
+      background:linear-gradient(45deg,#25D366,#1da851);
+      box-shadow:0 5px 20px rgba(37,211,102,0.4);
+    }
+
+    .wa:hover{
+      transform:translateY(-5px) scale(1.03);
+      box-shadow:0 8px 25px rgba(37,211,102,0.6);
+    }
+
+    .footer{
+      margin-top:35px;
+      font-size:14px;
+      color:#cbd5e1;
+    }
+
+    @media(max-width:600px){
+
+      h1{
+        font-size:38px;
+      }
+
+      p{
+        font-size:16px;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="logo">
+      M
+    </div>
+
+    <h1>Selamat Datang di INDOKAFF</h1>
+
+    <p>
+      TERSEDIA BERBAGAI PARFUM DAN KEBUTUHAN SABUN RUMAH TANGGA ANDA.
+    </p>
+
+    <div class="buttons">
+
+      <!-- Tombol ke halaman berikutnya -->
+      <a href="indokaff1.html" class="btn shop">
+        Masuk ke Toko
+      </a>
+
+      <!-- Tombol WhatsApp -->
+      <a href="https://wa.me/qr/HXHHLVFMXTBRP1?text=Halo%20saya%20ingin%20bertanya"
+         class="btn wa">
+        Chat WhatsApp
+      </a>
+
+    </div>
+
+    <div class="footer">
+      © 2026 MyShop • All Rights Reserved
+    </div>
+
+  </div>
+
+</body>
+</html>
