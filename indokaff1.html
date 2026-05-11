@@ -42,13 +42,13 @@ const data = {
     {
       title:"Parfum Dior",
       price:"Rp120.000",
-      image:"IMG_20260207_230223.jpg", // gambar lokal
+      image:"Sotener.jpg", // gambar lokal
       rating:"4.9"
     },
     {
       title:"Parfum Chanel",
       price:"Rp150.000",
-      image:"IMG_20260207_230224.jpg", // gambar lokal lain
+      image:"Sotener.jpg", // gambar lokal
       rating:"5.0"
     }
   ],
@@ -57,19 +57,19 @@ const data = {
     {
       title:"3in1 ProSmart (CS,RB,SP,SW)",
       price:"Rp33.000",
-      image:"IMG_20260207_230225.jpg", // gambar lokal
+      image:"Sotener.jpg", // gambar lokal
       rating:"4.7"
     },
     {
       title:"Sabun Cuci Piring ProSmart (Besar)",
       price:"Rp24.000",
-      image:"IMG_20260207_230226.jpg", // gambar lokal
+      image:"Sotener.jpg", // gambar lokal
       rating:"4.8"
     },
     {
       title:"Sabun Cuci Piring INDOKAFF (1 Liter)",
       price:"Rp13.000",
-      image:"IMG_20260207_230227.jpg", // gambar lokal
+      image:"Sotener.jpg", // gambar lokal
       rating:"4.8"
     },
     {
@@ -86,22 +86,20 @@ const container = document.getElementById('products');
 function showCategory(category){
   container.innerHTML = "";
   data[category].forEach(product => {
-    const wa = `https://wa.me/6281234567890?text=Halo saya tertarik dengan ${product.title}`;
     container.innerHTML += `
-      <a href="${wa}" target="_blank" style="text-decoration:none;color:white;">
-        <div class="card">
-          <img src="${product.image}" alt="${product.title}">
-          <div class="info">
-            <div class="title">${product.title}</div>
-            <div class="price">${product.price}</div>
-            <div class="rating">⭐ ${product.rating}</div>
-          </div>
+      <div class="card">
+        <img src="${product.image}" alt="${product.title}">
+        <div class="info">
+          <div class="title">${product.title}</div>
+          <div class="price">${product.price}</div>
+          <div class="rating">⭐ ${product.rating}</div>
         </div>
-      </a>
+      </div>
     `;
   });
 }
 
+// default tampilkan parfum
 showCategory('parfum');
 </script>
 
