@@ -4,92 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Market Produk</title>
-
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
     body{
       font-family:Arial;
       background:#0f172a;
       color:white;
       padding:20px;
     }
-
-    h1{
-      text-align:center;
-      margin-bottom:20px;
-    }
-
-    .menu{
-      display:flex;
-      justify-content:center;
-      gap:15px;
-      margin-bottom:25px;
-      flex-wrap:wrap;
-    }
-
-    .menu button{
-      padding:12px 25px;
-      border:none;
-      border-radius:10px;
-      background:#1e293b;
-      color:white;
-      cursor:pointer;
-      font-size:16px;
-      transition:0.3s;
-    }
-
-    .menu button:hover{
-      background:#38bdf8;
-    }
-
-    .products{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:20px;
-    }
-
-    .card{
-      background:#1e293b;
-      border-radius:15px;
-      overflow:hidden;
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-5px);
-    }
-
-    .card img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-    }
-
-    .info{
-      padding:15px;
-    }
-
-    .title{
-      font-size:18px;
-      margin-bottom:10px;
-    }
-
-    .price{
-      color:#38bdf8;
-      font-weight:bold;
-      margin-bottom:8px;
-    }
-
-    .rating{
-      color:gold;
-    }
-
+    h1{text-align:center;margin-bottom:20px;}
+    .menu{display:flex;justify-content:center;gap:15px;margin-bottom:25px;flex-wrap:wrap;}
+    .menu button{padding:12px 25px;border:none;border-radius:10px;background:#1e293b;color:white;cursor:pointer;font-size:16px;transition:0.3s;}
+    .menu button:hover{background:#38bdf8;}
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+    .card{background:#1e293b;border-radius:15px;overflow:hidden;transition:0.3s;}
+    .card:hover{transform:translateY(-5px);}
+    .card img{width:100%;height:220px;object-fit:cover;}
+    .info{padding:15px;}
+    .title{font-size:18px;margin-bottom:10px;}
+    .price{color:#38bdf8;font-weight:bold;margin-bottom:8px;}
+    .rating{color:gold;}
   </style>
 </head>
 <body>
@@ -104,113 +37,73 @@
 <div class="products" id="products"></div>
 
 <script>
-
 const data = {
-
   parfum: [
-
     {
       title:"Parfum Dior",
       price:"Rp120.000",
-      image:"https://picsum.photos/300?1",
+      image:"IMG_20260207_230223.jpg", // gambar lokal
       rating:"4.9"
     },
-
     {
       title:"Parfum Chanel",
       price:"Rp150.000",
-      image:"https://picsum.photos/300?2",
+      image:"IMG_20260207_230224.jpg", // gambar lokal lain
       rating:"5.0"
     }
-
   ],
 
   sabun: [
-
     {
       title:"3in1 ProSmart (CS,RB,SP,SW)",
       price:"Rp33.000",
-      image:"https://picsum.photos/300?3",
+      image:"IMG_20260207_230225.jpg", // gambar lokal
       rating:"4.7"
     },
-
     {
       title:"Sabun Cuci Piring ProSmart (Besar)",
       price:"Rp24.000",
-      image:"https://picsum.photos/300?4",
+      image:"IMG_20260207_230226.jpg", // gambar lokal
       rating:"4.8"
     },
-
     {
       title:"Sabun Cuci Piring INDOKAFF (1 Liter)",
       price:"Rp13.000",
-              <img src="Sotener.jpg
-",
+      image:"IMG_20260207_230227.jpg", // gambar lokal
       rating:"4.8"
     },
-      {
+    {
       title:"SOFTENER (PINK,BLUE)",
       price:"Rp24.000",
-      image:"Sotener.jpg",
+      image:"Sotener.jpg", // gambar lokal
       rating:"4.8"
-
+    }
   ]
-
 };
 
 const container = document.getElementById('products');
 
 function showCategory(category){
-
   container.innerHTML = "";
-
   data[category].forEach(product => {
-
-    const wa =
-    `https://wa.me/6281234567890?text=Halo saya tertarik dengan ${product.title}`;
-
+    const wa = `https://wa.me/6281234567890?text=Halo saya tertarik dengan ${product.title}`;
     container.innerHTML += `
-
-      <a href="${wa}"
-         target="_blank"
-         style="text-decoration:none;color:white;">
-
+      <a href="${wa}" target="_blank" style="text-decoration:none;color:white;">
         <div class="card">
-
           <img src="${product.image}" alt="${product.title}">
-
           <div class="info">
-
-            <div class="title">
-              ${product.title}
-            </div>
-
-            <div class="price">
-              ${product.price}
-            </div>
-
-            <div class="rating">
-              ⭐ ${product.rating}
-            </div>
-
+            <div class="title">${product.title}</div>
+            <div class="price">${product.price}</div>
+            <div class="rating">⭐ ${product.rating}</div>
           </div>
-
         </div>
-
       </a>
-
     `;
-
   });
-
 }
 
 showCategory('parfum');
-
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
