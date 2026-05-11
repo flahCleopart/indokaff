@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Market Produk</title>
   <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
     body{
       font-family:Arial;
       background:#0f172a;
@@ -12,17 +17,60 @@
       padding:20px;
     }
     h1{text-align:center;margin-bottom:20px;}
-    .menu{display:flex;justify-content:center;gap:15px;margin-bottom:25px;flex-wrap:wrap;}
-    .menu button{padding:12px 25px;border:none;border-radius:10px;background:#1e293b;color:white;cursor:pointer;font-size:16px;transition:0.3s;}
-    .menu button:hover{background:#38bdf8;}
-    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
-    .card{background:#1e293b;border-radius:15px;overflow:hidden;transition:0.3s;}
-    .card:hover{transform:translateY(-5px);}
-    .card img{width:100%;height:220px;object-fit:cover;}
-    .info{padding:15px;}
-    .title{font-size:18px;margin-bottom:10px;}
-    .price{color:#38bdf8;font-weight:bold;margin-bottom:8px;}
-    .rating{color:gold;}
+    .menu{
+      display:flex;
+      justify-content:center;
+      gap:15px;
+      margin-bottom:25px;
+      flex-wrap:wrap;
+    }
+    .menu button{
+      padding:12px 25px;
+      border:none;
+      border-radius:10px;
+      background:#1e293b;
+      color:white;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+    }
+    .menu button:hover{
+      background:#38bdf8;
+    }
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+    .card{
+      background:#1e293b;
+      border-radius:15px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+    .card:hover{
+      transform:translateY(-5px);
+    }
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+    .info{
+      padding:15px;
+    }
+    .title{
+      font-size:18px;
+      margin-bottom:10px;
+    }
+    .price{
+      color:#38bdf8;
+      font-weight:bold;
+      margin-bottom:8px;
+    }
+    .rating{
+      color:gold;
+    }
   </style>
 </head>
 <body>
@@ -54,30 +102,21 @@ const data = {
   ],
 
   sabun: [
-    {
-      title:"3in1 ProSmart (CS,RB,SP,SW)",
-      price:"Rp33.000",
-      image:"3in1.png", // gambar lokal
-      rating:"4.7"
-    },
-    {
-      title:"Sabun Cuci Piring ProSmart (Besar)",
-      price:"Rp24.000",
-      image:"CupiPS.jpg", // gambar lokal
-      rating:"4.8"
-    },
-    {
-      title:"Detergen INDOKAFF (1 Liter)",
-      price:"Rp13.000",
-      image:"detergen.png", // gambar lokal
-      rating:"4.8"
-    },
-    {
-      title:"SOFTENER (PINK,BLUE)",
-      price:"Rp24.000",
-      image:"Softener.png", // gambar lokal
-      rating:"4.8"
-    }
+    { title:"3in1 ProSmart (CS,RB,SP,SW)", price:"Rp33.000", image:"3in1.png", rating:"4.7" },
+    { title:"Sabun Cuci Piring ProSmart (Besar)", price:"Rp24.000", image:"CupiPS.jpg", rating:"4.8" },
+    { title:"Detergen INDOKAFF (1 Liter)", price:"Rp13.000", image:"detergen.png", rating:"4.8" },
+    { title:"SOFTENER (PINK,BLUE)", price:"Rp24.000", image:"Softener.png", rating:"4.8" },
+    { title:"Pel Lavender (BB)", price:"Rp17.500", image:"sabun1.jpg", rating:"4.6" },
+    { title:"BRM", price:"Rp23.000", image:"sabun2.jpg", rating:"4.7" },
+    { title:"Sabun cuci tangan INDOKAFF(1 LITER)", price:"Rp13.000", image:"sabun3.jpg", rating:"4.8" },
+    { title:"Sabun pembersih kaca (BB)", price:"Rp12.000", image:"sabun4.jpg", rating:"4.5" },
+    { title:"Karbol lavender(BB)", price:"Rp17.500", image:"risol.png", rating:"4.7" },
+    { title:"SERE (BB)", price:"Rp27.500", image:"sabun6.jpg", rating:"4.9" },
+    { title:"Semir mobil oren(BK)", price:"Rp31.000", image:"sabun7.jpg", rating:"4.6" },
+    { title:"Semir mobil putih(BK)", price:"Rp35.000", image:"sabun8.jpg", rating:"4.7" },
+    { title:"Bubuk ajaib", price:"Rp25.000", image:"sabun9.jpg", rating:"4.8" },
+    { title:"Anti kerak mesin(BK)", price:"Rp27.000", image:"sabun10.jpg", rating:"4.7" },
+    { title:"Matic BLUE", price:"Rp27.500", image:"sabun11.jpg", rating:"4.8" }
   ]
 };
 
