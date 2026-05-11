@@ -6,7 +6,6 @@
   <title>Market Produk</title>
 
   <style>
-
     *{
       margin:0;
       padding:0;
@@ -123,7 +122,6 @@
       color:#94a3b8;
       margin-top:30px;
     }
-
   </style>
 </head>
 <body>
@@ -147,61 +145,45 @@
 <div class="products" id="products"></div>
 
 <script>
-
 const data = {
-
   parfum: [
-
     {
-      title:"Parfum Dior",
-      price:"Rp120.000",
+      title:"Parfum Soft white 600Mili",
+      price:"Rp30.000",
       image:"https://picsum.photos/300?1",
       rating:"4.9"
     },
     {
-      title:"Parfum Chanel",
-      price:"Rp150.000",
+      title:"B-Guest",
+      price:"Rp30.000",
       image:"https://picsum.photos/300?2",
       rating:"5.0"
     }
-    {
-      title:"Parfum Chanel",
-      price:"Rp150.000",
-      image:"https://picsum.photos/300?2",
-      rating:"5.0"
-    }
-
   ],
 
   sabun: [
-
     {
       title:"3in1 ProSmart (CS,RB,SP,SW)",
       price:"Rp33.000",
       image:"https://picsum.photos/300?3",
       rating:"4.7"
     },
-
     {
       title:"Softener PINK,BLIE(Besar)",
       price:"Rp24.000",
-      image:"Sotener",
+      image:"https://picsum.photos/300?4",
       rating:"4.8"
     },
-
     {
       title:"Sabun Cuci Piring INDOKAFF (1 Liter)",
       price:"Rp13.000",
       image:"https://picsum.photos/300?5",
       rating:"4.8"
     }
-
   ]
-
 };
 
 const container = document.getElementById('products');
-
 let currentCategory = "parfum";
 
 function changeCategory(category){
@@ -210,72 +192,40 @@ function changeCategory(category){
 }
 
 function renderProducts(){
-
   container.innerHTML = "";
-
-  const keyword = document
-    .getElementById('searchInput')
-    .value
-    .toLowerCase();
+  const keyword = document.getElementById('searchInput').value.toLowerCase();
 
   const filtered = data[currentCategory].filter(product =>
     product.title.toLowerCase().includes(keyword)
   );
 
   if(filtered.length === 0){
-
     container.innerHTML = `
       <div class="not-found">
         ❌ Barang tidak ditemukan
       </div>
     `;
-
     return;
   }
 
   filtered.forEach(product => {
-
-    const wa =
-    `https://wa.me/6281234567890?text=Halo saya tertarik dengan ${product.title}`;
-
+    const wa = `https://wa.me/6281234567890?text=Halo saya tertarik dengan ${product.title}`;
     container.innerHTML += `
-
-      <a href="${wa}"
-         target="_blank"
-         style="text-decoration:none;color:white;">
-
+      <a href="${wa}" target="_blank" style="text-decoration:none;color:white;">
         <div class="card">
-
           <img src="${product.image}" alt="${product.title}">
-
           <div class="info">
-
-            <div class="title">
-              ${product.title}
-            </div>
-
-            <div class="price">
-              ${product.price}
-            </div>
-
-            <div class="rating">
-              ⭐ ${product.rating}
-            </div>
-
+            <div class="title">${product.title}</div>
+            <div class="price">${product.price}</div>
+            <div class="rating">⭐ ${product.rating}</div>
           </div>
-
         </div>
-
       </a>
-
     `;
-
   });
-
 }
 
 renderProducts();
-
 </script>
 
 </body>
