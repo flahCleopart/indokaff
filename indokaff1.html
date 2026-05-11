@@ -5,20 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Market Produk</title>
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:Arial;background:#0f172a;color:white;padding:20px;}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+    body{
+      font-family:Arial;
+      background:#0f172a;
+      color:white;
+      padding:20px;
+    }
     h1{text-align:center;margin-bottom:20px;}
-    .menu{display:flex;justify-content:center;gap:15px;margin-bottom:25px;flex-wrap:wrap;}
-    .menu button{padding:12px 25px;border:none;border-radius:10px;background:#1e293b;color:white;cursor:pointer;font-size:16px;transition:0.3s;}
-    .menu button:hover{background:#38bdf8;}
-    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
-    .card{background:#1e293b;border-radius:15px;overflow:hidden;transition:0.3s;}
-    .card:hover{transform:translateY(-5px);}
-    .card img{width:100%;height:220px;object-fit:cover;}
-    .info{padding:15px;}
-    .title{font-size:18px;margin-bottom:10px;}
-    .price{color:#38bdf8;font-weight:bold;margin-bottom:8px;}
-    .rating{color:gold;}
+    .menu{
+      display:flex;
+      justify-content:center;
+      gap:15px;
+      margin-bottom:25px;
+      flex-wrap:wrap;
+    }
+    .menu button{
+      padding:12px 25px;
+      border:none;
+      border-radius:10px;
+      background:#1e293b;
+      color:white;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+    }
+    .menu button:hover{
+      background:#38bdf8;
+    }
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+    .card{
+      background:#1e293b;
+      border-radius:15px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+    .card:hover{
+      transform:translateY(-5px);
+    }
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+    .info{
+      padding:15px;
+    }
+    .title{
+      font-size:18px;
+      margin-bottom:10px;
+    }
+    .price{
+      color:#38bdf8;
+      font-weight:bold;
+      margin-bottom:8px;
+    }
+    .rating{
+      color:gold;
+    }
   </style>
 </head>
 <body>
@@ -35,13 +87,18 @@
 <script>
 const data = {
   parfum: [
-    { title:"Parfum 1", price:"Rp120.000", image:"parfum1.jpg", rating:"4.9" },
-    { title:"Parfum 2", price:"Rp121.000", image:"parfum2.jpg", rating:"4.8" },
-    { title:"Parfum 3", price:"Rp122.000", image:"parfum3.jpg", rating:"4.7" },
-    { title:"Parfum 4", price:"Rp123.000", image:"parfum4.jpg", rating:"4.6" },
-    { title:"Parfum 5", price:"Rp124.000", image:"parfum5.jpg", rating:"4.9" },
-    // lanjutkan sampai Parfum 80 dengan format yang sama
-    { title:"Parfum 80", price:"Rp199.000", image:"parfum80.jpg", rating:"4.8" }
+    {
+      title:"Parfum Dior",
+      price:"Rp120.000",
+      image:"Sotener.jpg", // gambar lokal
+      rating:"4.9"
+    },
+    {
+      title:"Parfum Chanel",
+      price:"Rp150.000",
+      image:"Sotener.jpg", // gambar lokal
+      rating:"5.0"
+    }
   ],
 
   sabun: [
@@ -87,3 +144,6 @@ showCategory('parfum');
 
 </body>
 </html>
+
+
+
