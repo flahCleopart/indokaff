@@ -337,22 +337,7 @@ showCategory('ultra');
 </script>
 
 </body>
-</html>  parfum: [
-    { title:"Parfum Soft white", price:"Rp30.000", image:"parfum1.jpg", rating:"4.9" },
-    
-
-const container = document.getElementById('products');
-
-function showCategory(category){
-  container.innerHTML = "";
-  data[category].forEach(product => {
-    container.innerHTML += `
-      <div class="card">
-        <img src="${product.image}" alt="${product.title}">
-        <div class="info">
-          <div class="title">${product.title}</div>
-          <div class="price">${product.price}</div>
-          <div class="rating">⭐ ${product.rating}</div>
+</html>  
         </div>
       </div>
     `;
